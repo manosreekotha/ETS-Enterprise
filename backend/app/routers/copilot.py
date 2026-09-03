@@ -6,4 +6,5 @@ router = APIRouter(prefix="/api/copilot", tags=["AI Copilot"])
 
 @router.post("/query", response_model=CopilotQueryResponse)
 def query_copilot(req: CopilotQueryRequest):
-    return ai_agent.process_query(req.question, req.context_tab)
+    return ai_agent.process_query(req.question, context_tab=req.context_tab, history=req.history)
+

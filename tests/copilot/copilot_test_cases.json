@@ -1,0 +1,524 @@
+[
+  {
+    "id": "COP-001",
+    "category": "WORKFORCE_COUNT",
+    "question": "How many employees are there?",
+    "expected_intent": "WORKFORCE_COUNT",
+    "expected_source": "/api/home/kpis",
+    "expected_behavior": "Return total employee count (590)",
+    "validation_rule": "590"
+  },
+  {
+    "id": "COP-002",
+    "category": "WORKFORCE_COUNT",
+    "question": "What is the total workforce?",
+    "expected_intent": "WORKFORCE_COUNT",
+    "expected_source": "/api/home/kpis",
+    "expected_behavior": "Return total workforce size",
+    "validation_rule": "590"
+  },
+  {
+    "id": "COP-003",
+    "category": "WORKFORCE_COUNT",
+    "question": "How many people work in the organization?",
+    "expected_intent": "WORKFORCE_COUNT",
+    "expected_source": "/api/home/kpis",
+    "expected_behavior": "Map people to employees and return 590",
+    "validation_rule": "590"
+  },
+  {
+    "id": "COP-004",
+    "category": "WORKFORCE_COUNT",
+    "question": "Give me the current employee count.",
+    "expected_intent": "WORKFORCE_COUNT",
+    "expected_source": "/api/home/kpis",
+    "expected_behavior": "Return headcount baseline 590",
+    "validation_rule": "590"
+  },
+  {
+    "id": "COP-005",
+    "category": "WORKFORCE_COUNT",
+    "question": "What is our headcount?",
+    "expected_intent": "WORKFORCE_COUNT",
+    "expected_source": "/api/home/kpis",
+    "expected_behavior": "Return headcount 590 with gender breakdown",
+    "validation_rule": "590"
+  },
+  {
+    "id": "COP-006",
+    "category": "STATE_ANALYSIS",
+    "question": "How many employees are in each state?",
+    "expected_intent": "STATE_ANALYSIS",
+    "expected_source": "/api/statewise/kpis",
+    "expected_behavior": "Return NH (364), ND (118), AK (108)",
+    "validation_rule": "364"
+  },
+  {
+    "id": "COP-007",
+    "category": "STATE_ANALYSIS",
+    "question": "Which state has the highest number of employees?",
+    "expected_intent": "STATE_ANALYSIS",
+    "expected_source": "/api/statewise/kpis",
+    "expected_behavior": "Identify NH as top state",
+    "validation_rule": "NH"
+  },
+  {
+    "id": "COP-008",
+    "category": "STATE_ANALYSIS",
+    "question": "Which state has the smallest workforce?",
+    "expected_intent": "STATE_ANALYSIS",
+    "expected_source": "/api/statewise/kpis",
+    "expected_behavior": "Identify AK as smallest state (108)",
+    "validation_rule": "AK"
+  },
+  {
+    "id": "COP-009",
+    "category": "STATE_ANALYSIS",
+    "question": "How many employees are in AK?",
+    "expected_intent": "STATE_ANALYSIS",
+    "expected_source": "/api/statewise/kpis",
+    "expected_behavior": "Return 108 employees for AK",
+    "validation_rule": "108"
+  },
+  {
+    "id": "COP-010",
+    "category": "STATE_ANALYSIS",
+    "question": "How many employees are in ND?",
+    "expected_intent": "STATE_ANALYSIS",
+    "expected_source": "/api/statewise/kpis",
+    "expected_behavior": "Return 118 employees for ND",
+    "validation_rule": "118"
+  },
+  {
+    "id": "COP-011",
+    "category": "COMPARISON",
+    "question": "Compare ND and AK by employee count.",
+    "expected_intent": "COMPARISON",
+    "expected_source": "/api/statewise/kpis",
+    "expected_behavior": "Compare ND (118) vs AK (108)",
+    "validation_rule": "118"
+  },
+  {
+    "id": "COP-012",
+    "category": "STATE_ANALYSIS",
+    "question": "What percentage of employees are in each state?",
+    "expected_intent": "STATE_ANALYSIS",
+    "expected_source": "/api/statewise/kpis",
+    "expected_behavior": "Return percentages for NH, ND, AK",
+    "validation_rule": "61.7"
+  },
+  {
+    "id": "COP-013",
+    "category": "STATE_ANALYSIS",
+    "question": "Which states have more than 50 employees?",
+    "expected_intent": "STATE_ANALYSIS",
+    "expected_source": "/api/statewise/kpis",
+    "expected_behavior": "Return all 3 states (NH, ND, AK)",
+    "validation_rule": "NH"
+  },
+  {
+    "id": "COP-014",
+    "category": "STATE_ANALYSIS",
+    "question": "Show the top 5 states by workforce.",
+    "expected_intent": "STATE_ANALYSIS",
+    "expected_source": "/api/statewise/kpis",
+    "expected_behavior": "Show NH, ND, AK",
+    "validation_rule": "NH"
+  },
+  {
+    "id": "COP-015",
+    "category": "SKILL_ANALYSIS",
+    "question": "What are the most common employee skills?",
+    "expected_intent": "SKILL_ANALYSIS",
+    "expected_source": "/api/techwise/kpis",
+    "expected_behavior": "Identify SQL and Python",
+    "validation_rule": "SQL"
+  },
+  {
+    "id": "COP-016",
+    "category": "SKILL_ANALYSIS",
+    "question": "Which skill is most common?",
+    "expected_intent": "SKILL_ANALYSIS",
+    "expected_source": "/api/techwise/kpis",
+    "expected_behavior": "Return SQL",
+    "validation_rule": "SQL"
+  },
+  {
+    "id": "COP-017",
+    "category": "TECHNICAL_SKILL_ANALYSIS",
+    "question": "How many employees have Python skills?",
+    "expected_intent": "TECHNICAL_SKILL_ANALYSIS",
+    "expected_source": "/api/techwise/kpis",
+    "expected_behavior": "Return Python mapped count (3)",
+    "validation_rule": "Python"
+  },
+  {
+    "id": "COP-018",
+    "category": "TECHNICAL_SKILL_ANALYSIS",
+    "question": "How many employees have SQL skills?",
+    "expected_intent": "TECHNICAL_SKILL_ANALYSIS",
+    "expected_source": "/api/techwise/kpis",
+    "expected_behavior": "Return SQL mapped count (4)",
+    "validation_rule": "SQL"
+  },
+  {
+    "id": "COP-019",
+    "category": "SKILL_ANALYSIS",
+    "question": "Show the top 10 technical skills.",
+    "expected_intent": "SKILL_ANALYSIS",
+    "expected_source": "/api/techwise/kpis",
+    "expected_behavior": "Return top skill breakdown",
+    "validation_rule": "SQL"
+  },
+  {
+    "id": "COP-020",
+    "category": "SKILL_ANALYSIS",
+    "question": "Which skills are rare in the organization?",
+    "expected_intent": "SKILL_ANALYSIS",
+    "expected_source": "/api/techwise/kpis",
+    "expected_behavior": "Identify MangoDB/Node JS/Angular",
+    "validation_rule": "MangoDB"
+  },
+  {
+    "id": "COP-021",
+    "category": "COMPARISON",
+    "question": "Compare Python and SQL skills.",
+    "expected_intent": "COMPARISON",
+    "expected_source": "/api/techwise/kpis",
+    "expected_behavior": "Compare Python vs SQL",
+    "validation_rule": "Python"
+  },
+  {
+    "id": "COP-022",
+    "category": "SALARY_ANALYSIS",
+    "question": "What is the average salary?",
+    "expected_intent": "SALARY_ANALYSIS",
+    "expected_source": "/api/salarywise/kpis",
+    "expected_behavior": "Return average CTC (~776,780)",
+    "validation_rule": "776,780"
+  },
+  {
+    "id": "COP-023",
+    "category": "GRADE_ANALYSIS",
+    "question": "What is the average salary by grade?",
+    "expected_intent": "GRADE_ANALYSIS",
+    "expected_source": "/api/salarywise/kpis",
+    "expected_behavior": "Return salary by E1-E10 grades",
+    "validation_rule": "E10"
+  },
+  {
+    "id": "COP-024",
+    "category": "GRADE_ANALYSIS",
+    "question": "Which grade has the highest average salary?",
+    "expected_intent": "GRADE_ANALYSIS",
+    "expected_source": "/api/salarywise/kpis",
+    "expected_behavior": "Return E10 or senior grade",
+    "validation_rule": "E10"
+  },
+  {
+    "id": "COP-025",
+    "category": "GRADE_ANALYSIS",
+    "question": "Which grade has the lowest average salary?",
+    "expected_intent": "GRADE_ANALYSIS",
+    "expected_source": "/api/salarywise/kpis",
+    "expected_behavior": "Return E1 or entry grade",
+    "validation_rule": "E1"
+  },
+  {
+    "id": "COP-026",
+    "category": "GRADE_ANALYSIS",
+    "question": "Show the salary distribution by grade.",
+    "expected_intent": "GRADE_ANALYSIS",
+    "expected_source": "/api/salarywise/kpis",
+    "expected_behavior": "Return salary distribution across grades",
+    "validation_rule": "Grade"
+  },
+  {
+    "id": "COP-027",
+    "category": "COMPARISON",
+    "question": "Compare salary between two grades.",
+    "expected_intent": "GRADE_ANALYSIS",
+    "expected_source": "/api/salarywise/kpis",
+    "expected_behavior": "Return salary comparison between grades",
+    "validation_rule": "Grade"
+  },
+  {
+    "id": "COP-028",
+    "category": "SALARY_ANALYSIS",
+    "question": "What are the top salary ranges?",
+    "expected_intent": "SALARY_ANALYSIS",
+    "expected_source": "/api/salarywise/kpis",
+    "expected_behavior": "Return salary bin ranges (5-10L, 10-15L, 20L+)",
+    "validation_rule": "5-10L"
+  },
+  {
+    "id": "COP-029",
+    "category": "EMPLOYEE_SEARCH",
+    "question": "Search for an employee by employee number.",
+    "expected_intent": "GENERAL_DASHBOARD_QUESTION",
+    "expected_source": "/api/home/kpis",
+    "expected_behavior": "Provide guidance on employee search",
+    "validation_rule": "employee"
+  },
+  {
+    "id": "COP-030",
+    "category": "EMPLOYEE_DETAILS",
+    "question": "Show complete details for employee 1019272.",
+    "expected_intent": "EMPLOYEE_DETAILS",
+    "expected_source": "/api/employee/1019272",
+    "expected_behavior": "Return Anand Kumar Potdar profile",
+    "validation_rule": "Anand"
+  },
+  {
+    "id": "COP-031",
+    "category": "EMPLOYEE_DETAILS",
+    "question": "What skills does employee 1019272 have?",
+    "expected_intent": "EMPLOYEE_DETAILS",
+    "expected_source": "/api/employee/1019272",
+    "expected_behavior": "Return skills for employee 1019272",
+    "validation_rule": "1019272"
+  },
+  {
+    "id": "COP-032",
+    "category": "EMPLOYEE_DETAILS",
+    "question": "What is the grade of employee 1019272?",
+    "expected_intent": "EMPLOYEE_DETAILS",
+    "expected_source": "/api/employee/1019272",
+    "expected_behavior": "Return grade (E6)",
+    "validation_rule": "E6"
+  },
+  {
+    "id": "COP-033",
+    "category": "EMPLOYEE_DETAILS",
+    "question": "What is the employee location for 1019272?",
+    "expected_intent": "EMPLOYEE_DETAILS",
+    "expected_source": "/api/employee/1019272",
+    "expected_behavior": "Return Bangalore",
+    "validation_rule": "Bangalore"
+  },
+  {
+    "id": "COP-034",
+    "category": "FINANCE_HISTORY",
+    "question": "Show the finance history for employee 1019272.",
+    "expected_intent": "FINANCE_HISTORY",
+    "expected_source": "/api/employee/1019272",
+    "expected_behavior": "Return multi-year finance progression",
+    "validation_rule": "CTC"
+  },
+  {
+    "id": "COP-035",
+    "category": "LEAVE_ANALYSIS",
+    "question": "Show leave information for employee 1019272.",
+    "expected_intent": "LEAVE_ANALYSIS",
+    "expected_source": "/api/employee/1019272",
+    "expected_behavior": "Return leave days and records",
+    "validation_rule": "Leave"
+  },
+  {
+    "id": "COP-036",
+    "category": "EXPERIENCE_ANALYSIS",
+    "question": "Show employee experience distribution.",
+    "expected_intent": "EXPERIENCE_ANALYSIS",
+    "expected_source": "/api/statewise/kpis",
+    "expected_behavior": "Return avg prior (3.2) and ETS tenure (2.9)",
+    "validation_rule": "prior"
+  },
+  {
+    "id": "COP-037",
+    "category": "EXPERIENCE_ANALYSIS",
+    "question": "Which grade has the most experienced employees?",
+    "expected_intent": "EXPERIENCE_ANALYSIS",
+    "expected_source": "/api/statewise/kpis",
+    "expected_behavior": "Return senior grade (E10)",
+    "validation_rule": "E10"
+  },
+  {
+    "id": "COP-038",
+    "category": "MANAGER_ANALYSIS",
+    "question": "Show employees by manager.",
+    "expected_intent": "MANAGER_ANALYSIS",
+    "expected_source": "/api/salarywise/kpis",
+    "expected_behavior": "Return manager breakdown",
+    "validation_rule": "manager"
+  },
+  {
+    "id": "COP-039",
+    "category": "MANAGER_ANALYSIS",
+    "question": "Which manager has the largest team?",
+    "expected_intent": "MANAGER_ANALYSIS",
+    "expected_source": "/api/salarywise/kpis",
+    "expected_behavior": "Return Kishore Kumar N or lead manager",
+    "validation_rule": "Kishore"
+  },
+  {
+    "id": "COP-040",
+    "category": "GRADE_ANALYSIS",
+    "question": "Compare employee counts across grades.",
+    "expected_intent": "GRADE_ANALYSIS",
+    "expected_source": "/api/salarywise/kpis",
+    "expected_behavior": "Return count across E1-E10 grades",
+    "validation_rule": "E6"
+  },
+  {
+    "id": "COP-041",
+    "category": "LEAVE_ANALYSIS",
+    "question": "How many leave records are available?",
+    "expected_intent": "LEAVE_ANALYSIS",
+    "expected_source": "/api/calendar/data",
+    "expected_behavior": "Return 799 leave records",
+    "validation_rule": "799"
+  },
+  {
+    "id": "COP-042",
+    "category": "LEAVE_ANALYSIS",
+    "question": "What is the average leave usage?",
+    "expected_intent": "LEAVE_ANALYSIS",
+    "expected_source": "/api/calendar/data",
+    "expected_behavior": "Return total leave days (1937.5)",
+    "validation_rule": "1937"
+  },
+  {
+    "id": "COP-043",
+    "category": "LEAVE_ANALYSIS",
+    "question": "Show leave trends.",
+    "expected_intent": "LEAVE_ANALYSIS",
+    "expected_source": "/api/calendar/data",
+    "expected_behavior": "Return leave type breakdown",
+    "validation_rule": "Casual"
+  },
+  {
+    "id": "COP-044",
+    "category": "LEAVE_ANALYSIS",
+    "question": "Which employees have the highest leave usage?",
+    "expected_intent": "LEAVE_ANALYSIS",
+    "expected_source": "/api/calendar/data",
+    "expected_behavior": "Return top leave users",
+    "validation_rule": "leave"
+  },
+  {
+    "id": "COP-045",
+    "category": "CALENDAR_ANALYSIS",
+    "question": "Show the calendar data.",
+    "expected_intent": "LEAVE_ANALYSIS",
+    "expected_source": "/api/calendar/data",
+    "expected_behavior": "Return calendar grid and events",
+    "validation_rule": "799"
+  },
+  {
+    "id": "COP-046",
+    "category": "CALENDAR_ANALYSIS",
+    "question": "What events are scheduled?",
+    "expected_intent": "LEAVE_ANALYSIS",
+    "expected_source": "/api/calendar/data",
+    "expected_behavior": "Return scheduled calendar events",
+    "validation_rule": "events"
+  },
+  {
+    "id": "COP-051",
+    "category": "LOCATION_ANALYSIS",
+    "question": "Where do most of our people sit?",
+    "expected_intent": "LOCATION_ANALYSIS",
+    "expected_source": "/api/home/kpis",
+    "expected_behavior": "Identify Bangalore (396 emps)",
+    "validation_rule": "Bangalore"
+  },
+  {
+    "id": "COP-052",
+    "category": "LOCATION_ANALYSIS",
+    "question": "Where is our biggest workforce concentration?",
+    "expected_intent": "LOCATION_ANALYSIS",
+    "expected_source": "/api/home/kpis",
+    "expected_behavior": "Identify Bangalore",
+    "validation_rule": "Bangalore"
+  },
+  {
+    "id": "COP-053",
+    "category": "SKILL_ANALYSIS",
+    "question": "What skills are we strongest in?",
+    "expected_intent": "SKILL_ANALYSIS",
+    "expected_source": "/api/techwise/kpis",
+    "expected_behavior": "Identify SQL and Python",
+    "validation_rule": "SQL"
+  },
+  {
+    "id": "COP-054",
+    "category": "SALARY_ANALYSIS",
+    "question": "Who are our highest-paid employees?",
+    "expected_intent": "SALARY_ANALYSIS",
+    "expected_source": "/api/salarywise/kpis",
+    "expected_behavior": "Identify Sreekanth V Pillai (50L)",
+    "validation_rule": "Sreekanth"
+  },
+  {
+    "id": "COP-056",
+    "category": "COMPARISON",
+    "question": "Are we more concentrated in ND or NH?",
+    "expected_intent": "COMPARISON",
+    "expected_source": "/api/statewise/kpis",
+    "expected_behavior": "Identify NH as larger (364 vs 118)",
+    "validation_rule": "NH"
+  },
+  {
+    "id": "COP-058",
+    "category": "GENERAL_DASHBOARD_QUESTION",
+    "question": "Give me a management-level view of the workforce.",
+    "expected_intent": "GENERAL_DASHBOARD_QUESTION",
+    "expected_source": "/api/home/kpis",
+    "expected_behavior": "Return executive overview of 590 emps",
+    "validation_rule": "590"
+  },
+  {
+    "id": "COP-059",
+    "category": "GENERAL_DASHBOARD_QUESTION",
+    "question": "Give me a quick HR summary.",
+    "expected_intent": "GENERAL_DASHBOARD_QUESTION",
+    "expected_source": "/api/home/kpis",
+    "expected_behavior": "Return executive overview of 590 emps",
+    "validation_rule": "590"
+  },
+  {
+    "id": "COP-061",
+    "category": "UNSUPPORTED_QUERY",
+    "question": "Show me employee 999999999.",
+    "expected_intent": "UNSUPPORTED_QUERY",
+    "expected_source": "/api/employee/list",
+    "expected_behavior": "State employee 999999999 does not exist",
+    "validation_rule": "couldn't find"
+  },
+  {
+    "id": "COP-062",
+    "category": "UNSUPPORTED_QUERY",
+    "question": "What is the salary of employee ABC123?",
+    "expected_intent": "UNSUPPORTED_QUERY",
+    "expected_source": "/api/employee/list",
+    "expected_behavior": "State information is unavailable",
+    "validation_rule": "couldn't find"
+  },
+  {
+    "id": "COP-063",
+    "category": "UNSUPPORTED_QUERY",
+    "question": "How many employees will join next year?",
+    "expected_intent": "UNSUPPORTED_QUERY",
+    "expected_source": "/api/home/kpis",
+    "expected_behavior": "State future predictive data is unavailable",
+    "validation_rule": "couldn't find"
+  },
+  {
+    "id": "COP-064",
+    "category": "UNSUPPORTED_QUERY",
+    "question": "What is the employee medical history?",
+    "expected_intent": "UNSUPPORTED_QUERY",
+    "expected_source": "/api/employee/list",
+    "expected_behavior": "State medical records are not recorded",
+    "validation_rule": "couldn't find"
+  },
+  {
+    "id": "COP-065",
+    "category": "UNSUPPORTED_QUERY",
+    "question": "How many people do we have in Texas?",
+    "expected_intent": "UNSUPPORTED_QUERY",
+    "expected_source": "/api/statewise/kpis",
+    "expected_behavior": "State Texas is not in dataset (only NH, ND, AK)",
+    "validation_rule": "couldn't find"
+  }
+]

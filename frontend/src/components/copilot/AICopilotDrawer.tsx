@@ -104,6 +104,20 @@ export const AICopilotDrawer: React.FC<AICopilotDrawerProps> = ({
                   : 'bg-white text-slate-800 border border-slate-200 rounded-bl-none shadow-xs'
               }`}
             >
+              {/* Intent Badge for Assistant */}
+              {m.role === 'assistant' && m.response?.intent && (
+                <div className="mb-1.5 flex items-center justify-between gap-1 text-[10px]">
+                  <span className="px-1.5 py-0.5 rounded bg-purple-100 text-purple-700 font-bold tracking-tight">
+                    [{m.response.intent}]
+                  </span>
+                  {m.response.confidence && (
+                    <span className="text-[9px] text-slate-600 font-medium">
+                      {(m.response.confidence * 100).toFixed(0)}% match
+                    </span>
+                  )}
+                </div>
+              )}
+
               <p className="whitespace-pre-wrap">{m.content}</p>
 
               {/* Insights List */}
@@ -132,6 +146,13 @@ export const AICopilotDrawer: React.FC<AICopilotDrawerProps> = ({
                       <Bar dataKey="value" fill="#8b5cf6" radius={[2, 2, 0, 0]} />
                     </BarChart>
                   </ResponsiveContainer>
+                </div>
+              )}
+
+              {/* Source API Reference */}
+              {m.role === 'assistant' && m.response?.source && (
+                <div className="mt-1.5 text-[9px] text-slate-600 font-mono flex items-center justify-end gap-1 border-t border-slate-100 pt-1">
+                  <span>Source: {m.response.source}</span>
                 </div>
               )}
             </div>

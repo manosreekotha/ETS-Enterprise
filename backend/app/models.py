@@ -103,10 +103,18 @@ class CalendarData(BaseModel):
 class CopilotQueryRequest(BaseModel):
     question: str
     context_tab: Optional[str] = None
+    history: Optional[List[Dict[str, Any]]] = None
 
 class CopilotQueryResponse(BaseModel):
     answer: str
     insights: List[str]
+    intent: str = "GENERAL_DASHBOARD_QUESTION"
+    data: Optional[Dict[str, Any]] = None
+    filters: Optional[Dict[str, Any]] = None
+    source: str = "/api/home/kpis"
+    confidence: float = 1.0
     chart_data: Optional[List[Dict[str, Any]]] = None
     chart_type: Optional[str] = None
     related_metrics: Optional[Dict[str, Any]] = None
+    chart: Optional[Dict[str, Any]] = None
+

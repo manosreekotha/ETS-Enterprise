@@ -265,7 +265,19 @@ export interface CalendarData {
 export interface CopilotResponse {
   answer: string;
   insights: string[];
+  intent?: string;
+  source?: string;
+  confidence?: number;
+  data?: Record<string, any>;
+  filters?: Record<string, any>;
   chart_data?: { name: string; value: number }[];
   chart_type?: 'bar' | 'pie' | 'line';
+  chart?: {
+    type?: string;
+    title?: string;
+    xAxis?: string;
+    yAxis?: string;
+    data?: any[];
+  };
   related_metrics?: { [key: string]: any };
 }
